@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "untitled",
+  "version": "${version}",
+  "name": "untitled",
+  "description": "use Kotlin Language mod in fabric",
+  "authors": [
+    "Error1015"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/untitled/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.error1015.untitled.client.UntitledClient"
+    ],
+    "main": [
+      "org.error1015.untitled.Untitled"
+    ]
+  },
+  "mixins": [
+    "untitled.mixins.json",
+    {
+      "config": "untitled.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
