@@ -1,28 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "untitled",
+  "id": "examplemod",
   "version": "${version}",
-  "name": "untitled",
+  "name": "ExampleMod",
   "description": "use Kotlin Language mod in fabric",
   "authors": [
     "Error1015"
   ],
   "contact": {},
   "license": "MIT",
-  "icon": "assets/untitled/icon.png",
+  "icon": "assets/examplemod/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
-      "org.error1015.untitled.client.UntitledClient"
+      "org.error1015.examplemod.client.ExampleModClient"
     ],
     "main": [
-      "org.error1015.untitled.Untitled"
+      "org.error1015.examplemod.ExampleMod"
     ]
   },
   "mixins": [
-    "untitled.mixins.json",
+    "examplemod.mixins.json",
     {
-      "config": "untitled.client.mixins.json",
+      "config": "examplemod.client.mixins.json",
       "environment": "client"
     }
   ],

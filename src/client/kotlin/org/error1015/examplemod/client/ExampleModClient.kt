@@ -1,8 +1,8 @@
-package org.error1015.untitled.client
+package org.error1015.examplemod.client
 
 import net.fabricmc.api.ClientModInitializer
 
-class UntitledClient : ClientModInitializer {
+class ExampleModClient : ClientModInitializer {
 
     override fun onInitializeClient() {
         println("Untitled Client Initialized")

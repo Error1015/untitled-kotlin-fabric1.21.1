@@ -1,4 +1,4 @@
-package org.error1015.untitled.item.custom
+package org.error1015.examplemod.item.custom
 
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.Item
@@ -26,6 +26,6 @@ object CoolItem : Item(Settings().maxCount(1)) {
         tooltip: MutableList<Text>?,
         type: TooltipType?,
     ) {
-        tooltip?.add(Text.translatable("tooltip.untitled.cool_item"))
+        tooltip?.add(Text.translatable("tooltip.examplemod.cool_item"))
     }
 }
