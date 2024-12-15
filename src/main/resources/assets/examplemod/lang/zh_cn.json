@@ -1,6 +1,6 @@
 {
-  "itemGroup.examplemod.example_mod_group": "我的模组物品",
-  "example_mod_group": "KotlinMod",
+  "itemGroup.examplemod.example_mod_group": "ExampleMod",
+  "example_mod_group": "ExampleMod",
   "item.examplemod.custom_item": "普通物品",
   "item.examplemod.cool_item": "酷酷的物品",
   "tooltip.examplemod.cool_item": "传送至100格的位置"

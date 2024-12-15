@@ -1,6 +1,6 @@
 {
-  "itemGroup.examplemod.example_mod_group": "My Mod Items",
-  "example_mod_group": "KotlinMod",
+  "itemGroup.examplemod.example_mod_group": "Example Mod Items",
+  "example_mod_group": "ExampleMod",
   "item.examplemod.custom_item": "Custom Item",
   "item.examplemod.cool_item": "Cool Item",
   "tooltip.examplemod.cool_item": "x + 100\ny + 100"
