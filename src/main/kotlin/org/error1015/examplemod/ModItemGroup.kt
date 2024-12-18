@@ -21,6 +21,11 @@ object ModItemGroup {
             .entries { _, entries ->
                 entries.add(ModItems.CUSTOM_ITEM)
                 entries.add(ModItems.COOL_ITEM)
+                entries.add(ModItems.MY_PICK_AXE)
+                entries.add(ModItems.EXAMPLE_HELMET)
+                entries.add(ModItems.EXAMPLE_CHESTPLATE)
+                entries.add(ModItems.EXAMPLE_LEGGINGS)
+                entries.add(ModItems.EXAMPLE_BOOTS)
             }
             .build()
     )
@@ -32,6 +37,7 @@ object ModItemGroup {
             entries.add(ModItems.COOL_ITEM)
         })
     }
+
     fun init() {
         addItemToCreativeTab()
     }
