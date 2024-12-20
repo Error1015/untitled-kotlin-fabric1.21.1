@@ -25,7 +25,7 @@ object ModArmorMaterials {
         ), 22, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, { Ingredient.ofItems(ModItems.COOL_ITEM) }, 25.0f, 2.0f, false
     )
 
-    fun registerMaterial(
+    private fun registerMaterial(
         id: String,
         defensePoints: Map<ArmorItem.Type, Int>,
         enchantability: Int,
@@ -35,12 +35,12 @@ object ModArmorMaterials {
         knockbackResistance: Float,
         dyeable: Boolean,
     ): RegistryEntry<ArmorMaterial> {
-        val list = listOf(ArmorMaterial.Layer(Identifier.of(ExampleMod.MODID, id), "", dyeable))
+        val layers = listOf(ArmorMaterial.Layer(Identifier.of(ExampleMod.MODID, id), "", dyeable))
         var material = ArmorMaterial(
-            defensePoints, enchantability, equipSound, repairIngredientSupplier, list, toughness, knockbackResistance
+            defensePoints, enchantability, equipSound, repairIngredientSupplier, layers, toughness, knockbackResistance
         )
         material = Registry.register(Registries.ARMOR_MATERIAL, Identifier.of(ExampleMod.MODID, id), material)
-        return RegistryEntry.of(material);
+        return RegistryEntry.of(material)
     }
 
 }

@@ -8,6 +8,7 @@ import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import net.minecraft.text.Text
 import net.minecraft.util.Identifier
+import org.error1015.examplemod.blocks.ModBlocks
 import org.error1015.examplemod.item.ModItems
 
 object ModItemGroup {
@@ -19,6 +20,7 @@ object ModItemGroup {
             .displayName(Text.translatable("itemGroup.examplemod.example_mod_group"))
             .icon { ModItems.CUSTOM_ITEM.defaultStack }
             .entries { _, entries ->
+                // Items
                 entries.add(ModItems.CUSTOM_ITEM)
                 entries.add(ModItems.COOL_ITEM)
                 entries.add(ModItems.MY_PICK_AXE)
@@ -26,6 +28,9 @@ object ModItemGroup {
                 entries.add(ModItems.EXAMPLE_CHESTPLATE)
                 entries.add(ModItems.EXAMPLE_LEGGINGS)
                 entries.add(ModItems.EXAMPLE_BOOTS)
+                entries.add(ModItems.MYAGLET)
+                // BlockItems
+                entries.add(ModBlocks.TEST_BLOCK)
             }
             .build()
     )

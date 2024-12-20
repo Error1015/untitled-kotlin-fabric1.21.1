@@ -3,5 +3,6 @@
   "example_mod_group": "ExampleMod",
   "item.examplemod.custom_item": "普通物品",
   "item.examplemod.cool_item": "酷酷的物品",
-  "tooltip.examplemod.cool_item": "传送至100格的位置"
+  "tooltip.examplemod.cool_item": "雷神降临!",
+  "item.examplemod.counter.info": "Used %1$s times"
 }

@@ -3,5 +3,6 @@
   "example_mod_group": "ExampleMod",
   "item.examplemod.custom_item": "Custom Item",
   "item.examplemod.cool_item": "Cool Item",
-  "tooltip.examplemod.cool_item": "x + 100\ny + 100"
+  "tooltip.examplemod.cool_item": "spawn lighting!",
+  "item.examplemod.counter.info": "Used %1$s times"
 }
