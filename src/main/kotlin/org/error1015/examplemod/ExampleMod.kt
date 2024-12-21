@@ -13,11 +13,11 @@ class ExampleMod : ModInitializer {
     }
 
     private fun init() {
-        ModItems.init() // Items
-        ModBlocks.init() // Blocks
-        ModItemGroup.init() // Item Group
-        ModArmorMaterials.init() // Armor Material
-        ModComponents.init() // Component
+        ModItems
+        ModBlocks
+        ModItemGroup
+        ModArmorMaterials
+        ModComponents
     }
 
     companion object {
