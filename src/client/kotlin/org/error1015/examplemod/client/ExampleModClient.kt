@@ -5,6 +5,6 @@ import net.fabricmc.api.ClientModInitializer
 class ExampleModClient : ClientModInitializer {
 
     override fun onInitializeClient() {
-        println("Untitled Client Initialized")
+        println("ExampleMod Client Initialized")
     }
 }

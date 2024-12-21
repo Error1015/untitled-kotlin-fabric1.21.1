@@ -17,8 +17,8 @@ import net.minecraft.world.World
 object CoolItem : Item(Settings().maxCount(1)) {
     override fun use(world: World?, user: PlayerEntity?, hand: Hand?): TypedActionResult<ItemStack> {
         val stack: ItemStack = this.defaultStack
-        if (world!!.isClient || user == null) return TypedActionResult.pass(stack) // 获取玩家水平方向10格的位置
-        val frontOfPlayer: BlockPos? = user.blockPos?.offset(user.horizontalFacing, 10)
+        if (!world!!.isClient || user == null) return TypedActionResult.pass(stack)
+        val frontOfPlayer: BlockPos? = user.blockPos?.offset(user.horizontalFacing, 10) // 获取玩家水平方向10格的位置
         val lightningBolt = LightningEntity(EntityType.LIGHTNING_BOLT, world)
         lightningBolt.setPosition(frontOfPlayer?.toCenterPos())
         world.spawnEntity(lightningBolt)

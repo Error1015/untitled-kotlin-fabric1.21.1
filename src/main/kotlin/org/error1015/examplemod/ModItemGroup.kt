@@ -28,7 +28,7 @@ object ModItemGroup {
                 entries.add(ModItems.EXAMPLE_CHESTPLATE)
                 entries.add(ModItems.EXAMPLE_LEGGINGS)
                 entries.add(ModItems.EXAMPLE_BOOTS)
-                entries.add(ModItems.MYAGLET)
+                entries.add(ModItems.MY_AGLET)
                 // BlockItems
                 entries.add(ModBlocks.TEST_BLOCK)
             }
@@ -43,7 +43,7 @@ object ModItemGroup {
         })
     }
 
-    fun init() {
+    init {
         addItemToCreativeTab()
     }
 }

@@ -14,8 +14,6 @@ import org.error1015.examplemod.item.ModItems
 
 
 object ModArmorMaterials {
-    fun init() {}
-
     val EXAMPLE = registerMaterial(
         "example", mapOf(
             ArmorItem.Type.HELMET to 3,

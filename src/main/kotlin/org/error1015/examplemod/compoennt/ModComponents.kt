@@ -8,13 +8,9 @@ import net.minecraft.util.Identifier
 import org.error1015.examplemod.ExampleMod
 
 object ModComponents {
-    fun init() {}
-
-
     val CLICK_COUNT_COMPONENT: ComponentType<Int> = registerComponent(
         Registries.DATA_COMPONENT_TYPE, "click_count", Codec.INT
     )
-
 
     private fun <T> registerComponent(
         type: Registry<ComponentType<*>>,

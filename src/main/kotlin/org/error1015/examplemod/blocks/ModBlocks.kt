@@ -23,6 +23,4 @@ object ModBlocks {
         }
         return Registry.register(Registries.BLOCK, Identifier.of(ExampleMod.MODID, name), block);
     }
-
-    fun init() {}
 }
