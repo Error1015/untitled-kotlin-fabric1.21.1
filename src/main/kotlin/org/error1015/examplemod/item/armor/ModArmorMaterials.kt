@@ -16,10 +16,10 @@ import org.error1015.examplemod.item.ModItems
 object ModArmorMaterials {
     val EXAMPLE = registerMaterial(
         "example", mapOf(
-            ArmorItem.Type.HELMET to 3,
-            ArmorItem.Type.CHESTPLATE to 8,
-            ArmorItem.Type.LEGGINGS to 6,
-            ArmorItem.Type.BOOTS to 3
+            ArmorItem.Type.HELMET to 30,
+            ArmorItem.Type.CHESTPLATE to 80,
+            ArmorItem.Type.LEGGINGS to 60,
+            ArmorItem.Type.BOOTS to 30
         ), 22, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, { Ingredient.ofItems(ModItems.COOL_ITEM) }, 25.0f, 2.0f, false
     )
 

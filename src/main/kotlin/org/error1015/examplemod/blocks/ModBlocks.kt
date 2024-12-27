@@ -18,9 +18,7 @@ object ModBlocks {
         name: String,
         shouldRegisterItem: Boolean,
     ): Block {
-        if (shouldRegisterItem) {
-            ModItems.registerItem(name, BlockItem(block, Item.Settings()))
-        }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExampleMod.MODID, name), block);
+        if (shouldRegisterItem) ModItems.registerItem(name, BlockItem(block, Item.Settings()))
+        return Registry.register(Registries.BLOCK, Identifier.of(ExampleMod.MODID, name), block)
     }
 }

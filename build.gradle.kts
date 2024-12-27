@@ -24,7 +24,7 @@ loom {
     splitEnvironmentSourceSets()
 
     mods {
-        register("untitled") {
+        register("ExampleMod") {
             sourceSet("main")
             sourceSet("client")
         }

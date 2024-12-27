@@ -16,10 +16,8 @@ object ModItemGroup {
     private val ModGroup: ItemGroup = Registry.register(
         Registries.ITEM_GROUP,
         Identifier.of(ExampleMod.MODID, "example_mod_group"),
-        FabricItemGroup.builder()
-            .displayName(Text.translatable("itemGroup.examplemod.example_mod_group"))
-            .icon { ModItems.CUSTOM_ITEM.defaultStack }
-            .entries { _, entries ->
+        FabricItemGroup.builder().displayName(Text.translatable("itemGroup.examplemod.example_mod_group"))
+            .icon { ModItems.CUSTOM_ITEM.defaultStack }.entries { _, entries ->
                 // Items
                 entries.add(ModItems.CUSTOM_ITEM)
                 entries.add(ModItems.COOL_ITEM)
@@ -29,11 +27,10 @@ object ModItemGroup {
                 entries.add(ModItems.EXAMPLE_LEGGINGS)
                 entries.add(ModItems.EXAMPLE_BOOTS)
                 entries.add(ModItems.MY_AGLET)
+                entries.add(ModItems.CURSED_RING)
                 // BlockItems
                 entries.add(ModBlocks.TEST_BLOCK)
-            }
-            .build()
-    )
+            }.build())
 
     // 添加至已有物品栏
     private fun addItemToCreativeTab() {
@@ -47,4 +44,3 @@ object ModItemGroup {
         addItemToCreativeTab()
     }
 }
-   

@@ -13,17 +13,9 @@ import net.minecraft.util.Identifier
 import net.minecraft.util.Rarity
 
 object MyAglet : TrinketItem(Settings().maxDamage(100).rarity(Rarity.RARE).maxCount(1)) {
-    override fun getModifiers(
-        stack: ItemStack?,
-        slot: SlotReference?,
-        entity: LivingEntity?,
-        slotIdentifier: Identifier?,
-    ): Multimap<RegistryEntry<EntityAttribute>, EntityAttributeModifier> {
+    override fun getModifiers(stack: ItemStack?, slot: SlotReference?, entity: LivingEntity?, slotIdentifier: Identifier?): Multimap<RegistryEntry<EntityAttribute>, EntityAttributeModifier> {
         val modifier = super.getModifiers(stack, slot, entity, slotIdentifier)
-        modifier.put(
-            EntityAttributes.GENERIC_MOVEMENT_SPEED,
-            EntityAttributeModifier(slotIdentifier, 0.1, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
-        )
+        modifier.put(EntityAttributes.GENERIC_MOVEMENT_SPEED, EntityAttributeModifier(slotIdentifier, 0.1, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL))
         return modifier
     }
 }

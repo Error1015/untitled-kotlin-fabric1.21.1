@@ -4,5 +4,17 @@
   "item.examplemod.custom_item": "普通物品",
   "item.examplemod.cool_item": "酷酷的物品",
   "tooltip.examplemod.cool_item": "雷神降临!",
-  "item.examplemod.counter.info": "Used %1$s times"
+  "item.examplemod.example_helmet": "管理员头盔",
+  "item.examplemod.example_chestplate": "管理员胸甲",
+  "item.examplemod.example_leggings": "管理员护腿",
+  "item.examplemod.example_boots": "管理员靴子",
+  "item.examplemod.my_aglet": "脚环",
+
+  "item.examplemod.cursed_ring": "七咒之戒",
+  "item.examplemod.cursed_ring.tooltip1": "§5一旦佩戴，它便成为你的一部分。",
+  "item.examplemod.cursed_ring.tooltip2": "§4这枚戒指将永远陪伴着你。",
+  "item.examplemod.cursed_ring.tooltip3": "§6需要神的能力才能取下它。",
+  "item.examplemod.counter.info": "Used %1$s times",
+
+  "block.examplemod.test_block": "我的方块"
 }
