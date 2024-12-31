@@ -13,7 +13,6 @@ import net.minecraft.util.TypedActionResult
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 
-
 object CoolItem : Item(Settings().maxCount(1)) {
     override fun use(world: World?, user: PlayerEntity?, hand: Hand?): TypedActionResult<ItemStack> {
         val stack: ItemStack = this.defaultStack
@@ -27,10 +26,7 @@ object CoolItem : Item(Settings().maxCount(1)) {
     }
 
     override fun appendTooltip(
-        stack: ItemStack?,
-        context: TooltipContext?,
-        tooltip: MutableList<Text>?,
-        type: TooltipType?,
+        stack: ItemStack?, context: TooltipContext?, tooltip: MutableList<Text>?, type: TooltipType?,
     ) {
         tooltip?.add(Text.translatable("tooltip.examplemod.cool_item").formatted(Formatting.GOLD))
     }

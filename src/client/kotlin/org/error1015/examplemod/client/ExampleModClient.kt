@@ -1,9 +1,9 @@
 package org.error1015.examplemod.client
 
-import net.fabricmc.api.ClientModInitializer
+import org.error1015.examplemod.Logger
 
-class ExampleModClient : ClientModInitializer {
-    override fun onInitializeClient() {
-        println("ExampleMod Client Initialized")
+object ExampleModClient {
+    fun onClientSetup() {
+        Logger.info("Kotlin client setup! ")
     }
 }

@@ -5,7 +5,7 @@ import net.minecraft.component.ComponentType
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import net.minecraft.util.Identifier
-import org.error1015.examplemod.ExampleMod
+import org.error1015.examplemod.MODID
 
 object ModComponents {
     val CLICK_COUNT_COMPONENT: ComponentType<Int> = registerComponent(
@@ -17,6 +17,6 @@ object ModComponents {
         path: String,
         codec: Codec<T>,
     ): ComponentType<T> = Registry.register(
-        type, Identifier.of(ExampleMod.MODID, path), ComponentType.builder<T>().codec(codec).build()
+        type, Identifier.of(MODID, path), ComponentType.builder<T>().codec(codec).build()
     )
 }

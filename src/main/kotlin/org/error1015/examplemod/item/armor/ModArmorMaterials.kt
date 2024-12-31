@@ -9,7 +9,7 @@ import net.minecraft.registry.entry.RegistryEntry
 import net.minecraft.sound.SoundEvent
 import net.minecraft.sound.SoundEvents
 import net.minecraft.util.Identifier
-import org.error1015.examplemod.ExampleMod
+import org.error1015.examplemod.MODID
 import org.error1015.examplemod.item.ModItems
 
 
@@ -33,11 +33,11 @@ object ModArmorMaterials {
         knockbackResistance: Float,
         dyeable: Boolean,
     ): RegistryEntry<ArmorMaterial> {
-        val layers = listOf(ArmorMaterial.Layer(Identifier.of(ExampleMod.MODID, id), "", dyeable))
+        val layers = listOf(ArmorMaterial.Layer(Identifier.of(MODID, id), "", dyeable))
         var material = ArmorMaterial(
             defensePoints, enchantability, equipSound, repairIngredientSupplier, layers, toughness, knockbackResistance
         )
-        material = Registry.register(Registries.ARMOR_MATERIAL, Identifier.of(ExampleMod.MODID, id), material)
+        material = Registry.register(Registries.ARMOR_MATERIAL, Identifier.of(MODID, id), material)
         return RegistryEntry.of(material)
     }
 

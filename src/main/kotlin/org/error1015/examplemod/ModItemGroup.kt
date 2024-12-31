@@ -15,7 +15,7 @@ object ModItemGroup {
     // 自定义物品栏
     private val ModGroup: ItemGroup = Registry.register(
         Registries.ITEM_GROUP,
-        Identifier.of(ExampleMod.MODID, "example_mod_group"),
+        Identifier.of(MODID, "example_mod_group"),
         FabricItemGroup.builder().displayName(Text.translatable("itemGroup.examplemod.example_mod_group"))
             .icon { ModItems.CUSTOM_ITEM.defaultStack }.entries { _, entries ->
                 // Items

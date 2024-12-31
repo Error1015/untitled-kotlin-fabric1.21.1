@@ -13,10 +13,16 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "org.error1015.examplemod.client.ExampleModClient"
+      {
+        "adapter": "kotlin",
+        "value": "org.error1015.examplemod.client.ExampleModClient::onClientSetup"
+      }
     ],
     "main": [
-      "org.error1015.examplemod.ExampleMod"
+      {
+        "adapter": "kotlin",
+        "value": "org.error1015.examplemod.ExampleMod::onInitialize"
+      }
     ]
   },
   "mixins": [
