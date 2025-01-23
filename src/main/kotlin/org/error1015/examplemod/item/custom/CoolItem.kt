@@ -15,13 +15,13 @@ import net.minecraft.world.World
 
 object CoolItem : Item(Settings().maxCount(1)) {
     override fun use(world: World?, user: PlayerEntity?, hand: Hand?): TypedActionResult<ItemStack> {
-        val stack: ItemStack = this.defaultStack
+        val stack: ItemStack = defaultStack
         if (world == null || world.isClient || user == null) return TypedActionResult.fail(stack)
         val frontOfPlayer: BlockPos? = user.blockPos?.offset(user.horizontalFacing, 10) // 获取玩家水平方向10格的位置
         val lightningBolt = LightningEntity(EntityType.LIGHTNING_BOLT, world)
         lightningBolt.setPosition(frontOfPlayer?.toCenterPos())
         world.spawnEntity(lightningBolt)
-        stack.count--
+        if (!user.isCreative) stack.count--
         return TypedActionResult.success(stack)
     }
 

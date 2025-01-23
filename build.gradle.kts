@@ -31,29 +31,30 @@ loom {
     }
 }
 
+fabricApi {
+    configureDataGeneration {
+        outputDirectory = file("src/main/generated")
+    }
+}
+
 repositories {
-    maven {
-        name = "Terraformers"
-        url = uri("https://maven.terraformersmc.com/")
-    }
-    maven {
-        name = "TerraformersMc"
-        url = uri("https://maven.terraformersmc.com/")
-    }
-    maven {
-        name = "Ladysnake Libs"
-        url = uri("https://maven.ladysnake.org/releases")
-    }
+    maven("https://maven.terraformersmc.com/") { name = "Terraformers - ModMenu" }
+    maven("https://maven.terraformersmc.com/") { name = "TerraformersMc - ModMenu" }
+    maven("https://maven.ladysnake.org/releases") { name = "Trinkets Maven" }
+    maven("https://maven.blamejared.com/") { name = "JEI Maven" }
 }
 
 dependencies {
     minecraft("com.mojang:minecraft:${project.property("minecraft_version")}")
     mappings("net.fabricmc:yarn:${project.property("yarn_mappings")}:v2")
+    // Impl
     modImplementation("net.fabricmc:fabric-loader:${project.property("loader_version")}")
     modImplementation("net.fabricmc:fabric-language-kotlin:${project.property("kotlin_loader_version")}")
     modImplementation("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_version")}")
-    modImplementation("com.terraformersmc:modmenu:${project.property("modmenu_version")}")
     modImplementation("dev.emi:trinkets:${project.property("trinkets_version")}")
+    // Runtime
+    modRuntimeOnly("com.terraformersmc:modmenu:${project.property("modmenu_version")}")
+    modRuntimeOnly("mezz.jei:jei-${project.property("minecraft_version")}-fabric:${project.property("jei_version")}")
 }
 
 tasks.processResources {
@@ -64,9 +65,7 @@ tasks.processResources {
 
     filesMatching("fabric.mod.json") {
         expand(
-            "version" to project.version,
-            "minecraft_version" to project.property("minecraft_version"),
-            "loader_version" to project.property("loader_version"),
+            "version" to project.version, "minecraft_version" to project.property("minecraft_version"), "loader_version" to project.property("loader_version"),
             "kotlin_loader_version" to project.property("kotlin_loader_version")
         )
     }
@@ -95,6 +94,5 @@ publishing {
         }
     }
 
-    repositories {
-    }
+    repositories {}
 }

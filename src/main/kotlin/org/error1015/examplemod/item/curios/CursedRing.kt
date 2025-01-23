@@ -1,6 +1,7 @@
 package org.error1015.examplemod.item.curios
 
 import com.google.common.collect.Multimap
+import com.mojang.authlib.minecraft.client.MinecraftClient
 import dev.emi.trinkets.api.SlotReference
 import dev.emi.trinkets.api.TrinketEnums
 import dev.emi.trinkets.api.TrinketItem
@@ -24,8 +25,14 @@ object CursedRing : TrinketItem(Settings().maxCount(1).rarity(Rarity.EPIC)) {
     ): Multimap<RegistryEntry<EntityAttribute>, EntityAttributeModifier> {
         val modifier = super.getModifiers(stack, slot, entity, slotIdentifier)
         return modifier.apply {
-            put(EntityAttributes.GENERIC_ARMOR, EntityAttributeModifier(slotIdentifier, -0.5, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL))
-            put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, EntityAttributeModifier(slotIdentifier, -0.5, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL))
+            put(
+                EntityAttributes.GENERIC_ARMOR,
+                EntityAttributeModifier(slotIdentifier, -0.5, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            )
+            put(
+                EntityAttributes.GENERIC_ARMOR_TOUGHNESS,
+                EntityAttributeModifier(slotIdentifier, -0.5, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            )
         }
     }
 
@@ -35,16 +42,23 @@ object CursedRing : TrinketItem(Settings().maxCount(1).rarity(Rarity.EPIC)) {
         if (entity.isCreative && entity.isSpectator) return
     }
 
-    override fun getDropRule(stack: ItemStack?, slot: SlotReference?, entity: LivingEntity?): TrinketEnums.DropRule = TrinketEnums.DropRule.KEEP
+    override fun getDropRule(stack: ItemStack?, slot: SlotReference?, entity: LivingEntity?): TrinketEnums.DropRule =
+        TrinketEnums.DropRule.KEEP
 
-    override fun canUnequip(stack: ItemStack?, slot: SlotReference?, entity: LivingEntity?): Boolean = entity is PlayerEntity && entity.isCreative
+    override fun canUnequip(stack: ItemStack?, slot: SlotReference?, entity: LivingEntity?): Boolean =
+        entity is PlayerEntity && entity.isCreative
 
-    override fun appendTooltip(stack: ItemStack?, context: TooltipContext?, tooltip: MutableList<Text>?, type: TooltipType?) {
+    override fun appendTooltip(
+        stack: ItemStack?,
+        context: TooltipContext?,
+        tooltip: MutableList<Text>?,
+        type: TooltipType?
+    ) {
         tooltip?.apply {
             add(Text.empty())
-            add(Text.translatable("item.examplemod.cursed_ring.tooltip1"))
-            add(Text.translatable("item.examplemod.cursed_ring.tooltip2"))
-            add(Text.translatable("item.examplemod.cursed_ring.tooltip3"))
+            add(Text.translatable("tooltip.item.examplemod.cursed_ring1"))
+            add(Text.translatable("tooltip.item.examplemod.cursed_ring2"))
+            add(Text.translatable("tooltip.item.examplemod.cursed_ring3"))
             add(Text.empty())
         }
     }

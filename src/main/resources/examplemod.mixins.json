@@ -4,6 +4,7 @@
   "package": "org.error1015.examplemod.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "PlayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

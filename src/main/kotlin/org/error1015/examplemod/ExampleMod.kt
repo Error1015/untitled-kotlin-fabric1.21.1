@@ -8,9 +8,10 @@ import org.error1015.examplemod.item.armor.ModArmorMaterials
 import org.slf4j.Logger
 
 const val MODID: String = "examplemod"
-val Logger: Logger = LogUtils.getLogger()
 
 object ExampleMod {
+    private val Logger: Logger = LogUtils.getLogger()
+
     fun onInitialize() {
         init()
         Logger.info("ExampleMod Load!")

@@ -33,7 +33,7 @@ object ModItemGroup {
             }.build())
 
     // 添加至已有物品栏
-    private fun addItemToCreativeTab() {
+    private fun addItemToItemGroup() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ItemGroupEvents.ModifyEntries { entries ->
             entries.add(ModItems.CUSTOM_ITEM)
             entries.add(ModItems.COOL_ITEM)
@@ -41,6 +41,6 @@ object ModItemGroup {
     }
 
     init {
-        addItemToCreativeTab()
+        addItemToItemGroup()
     }
 }

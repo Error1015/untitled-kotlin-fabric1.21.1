@@ -23,6 +23,12 @@
         "adapter": "kotlin",
         "value": "org.error1015.examplemod.ExampleMod::onInitialize"
       }
+    ],
+    "fabric-datagen": [
+      {
+        "adapter": "kotlin",
+        "value": "org.error1015.examplemod.datagen.ExampleModDataGen"
+      }
     ]
   },
   "mixins": [
